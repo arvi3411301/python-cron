@@ -1,14 +1,14 @@
 # hello-python-cron
 
-This project consists of a basic Hasura project with a simple Python-Cron app running on it. Once this app is deployed on a Hasura cluster, you will have the app running at `https://www.<cluster-name>.hasura-app.io`
+This project consists of a basic Hasura project with a simple cron job app running on it. Once this app is deployed on a Hasura cluster, you will have the app running at `https://www.<cluster-name>.hasura-app.io`
 
-This is the right place to start if you are planning to build or want to learn to build an Python-Cron app with Hasura.
+This is the right place to start if you are planning to build or want to learn to build an app with Hasura.
 
 ## Sections
 
 * [Introduction](#introduction)
 * [Quickstart](#quickstart)
-* [Adding your own Python-Cron code](#adding-your-existing-cron-code)
+* [Adding your own code](#adding-your-existing-code)
 * [Local development](#local-development)
 * [FAQ](#faq)
 
@@ -47,11 +47,11 @@ When you push for the first time, it might take sometime. Next time onwards, it 
 
 Once the above commands are executed successfully, head over to `https://www.<cluster-name>.hasura-app.io` (in this case `https://www.h34-excise98-stg.hasura-app.io`) to view your app.
 
-## Adding your existing Cron code
-The Cron microservice[1] sample code is inside the `microservices/www/cron` directory. You can copy all your existing Cron code directly inside this directory, and start deploying your own Cron code to Hasura cluster.
+## Adding your existing code
+The microservice[1] sample code is inside the `microservices/www/cron` directory. You can copy all your existing code directly inside this directory, and start deploying your own code to Hasura cluster.
 
-### Step 1: Add your Cron code in the microservices directory
-Copy all your exising Cron source code in `microservices/www/cron` directory or replace the `microservices/www/cron` directory with your cron directory. Ensure that the structure of the directory is coherent with the current structure.
+### Step 1: Add your code in the microservices directory
+Copy all your exising source code in `microservices/www/cron` directory or replace the `microservices/www/cron` directory with your cron directory. Ensure that the structure of the directory is coherent with the current structure.
 
 ### Step 2: How to use CronTab Module
 Getting access to a crontab can happen in five ways, three system methods that will work only on Unix and require you to have the right permissions:
@@ -154,7 +154,7 @@ $ git commit -m "Added my Cron code"
 ```
 $ git push hasura master
 ```
-Now your Cron application should be running at: `https://www.<cluster-name>.hasura-app.io`
+Now your application should be running at: `https://www.<cluster-name>.hasura-app.io`
 
 [1] a microservice is a running application on the Hasura cluster. This could be an www, a web app, a Javascript app etc.
 
@@ -170,7 +170,7 @@ $ hasura api-console
 
 There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom microservice which does these for you on the endpoints that you define.
 
-This quickstart comes with one such custom microservice written in Python using the Cron framework. Check it out in action at `https://www.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
+This quickstart comes with one such custom microservice written in Python using the CronTab module. Check it out in action at `https://www.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
 
 In case you want to use another language/framework for your custom microservice. Take a look at our docs to see how you can add a new custom microservice.
 
