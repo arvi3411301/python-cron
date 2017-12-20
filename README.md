@@ -54,20 +54,23 @@ The microservice[1] sample code is inside the `microservices/www/cron` directory
 Copy all your exising source code in `microservices/www/cron` directory or replace the `microservices/www/cron` directory with your cron directory. Ensure that the structure of the directory is coherent with the current structure.
 
 ### Step 2: How to use CronTab Module
-Getting access to a crontab can happen in five ways, three system methods that will work only on Unix and require you to have the right permissions:
-
-```python
-from crontab import CronTab
-
-empty_cron    = CronTab()
-my_user_cron  = CronTab(user=True)
-users_cron    = CronTab(user='username')
-```
-
-And two ways from non-system sources that will work on Windows too:
+Getting access to a crontab can happen via tabfile method:
 
 ```python
 file_cron = CronTab(tabfile='filename.tab')
+```
+
+Tabfile name can be changed by the following steps
+
+1. Edit the filename in the Dockerfile present in `microservices/www/cron`
+
+```
+RUN touch filename.tab
+```
+
+2. Edit the filename in `main.py` present in `microservices/www/cron`
+```python
+my_cron = CronTab(tabfile='filename.tab')
 ```
 
 Creating a new job is as simple as:
