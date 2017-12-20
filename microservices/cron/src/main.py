@@ -12,5 +12,4 @@ my_cron.write()
 
 # Run the scheduler
 for result in my_cron.run_scheduler():
-    print (result)
     print ("This was printed to stdout by the process.")
