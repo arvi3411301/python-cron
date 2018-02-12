@@ -1,4 +1,4 @@
-# hello-python-cron
+# python-cron
 
 This project consists of a basic Hasura project with a simple cron job app running on it. Once this app is deployed on a Hasura cluster, you will have the app running at `https://www.<cluster-name>.hasura-app.io`
 
