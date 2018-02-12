@@ -25,14 +25,14 @@ Follow this section to get this project working. Before you begin, ensure you ha
 ### Step 1: Getting the project
 
 ```sh
-$ hasura quickstart hello-python-cron
-$ cd hello-python-cron
+$ hasura quickstart python-cron
+$ cd python-cron
 ```
 
 The above command does the following:
-1. Creates a new folder in the current working directory called `hello-python-cron`
+1. Creates a new folder in the current working directory called `python-cron`
 2. Creates a new free Hasura cluster for you and sets that cluster as the default cluster for this project
-3. Initializes `hello-python-cron` as a git repository and adds the necessary git remotes.
+3. Initializes `python-cron` as a git repository and adds the necessary git remotes.
 
 ### Step 2: Deploying this project
 
